@@ -1,0 +1,110 @@
+/* –––––––––––––––––––––––––––––––––– */
+/* JUMIN0CORE THEME */
+/* –––––––––––––––––––––––––––––––––– */
+
+/* Global and background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7f6; /* off-white */
+  color: #333;
+}
+
+.roster {
+  text-align: center;
+  padding: 30px 20px;
+  background: #e8f3f2; /* very light sage/turquoise */
+  border: 2px solid #cdd7d5;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.roster .title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #2a4d4c;
+}
+
+/* Output window */
+#output {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #cad5d3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Individual output lines */
+pyscript-output,
+#output > div {
+  background: #f0faf9; /* very pale turquoise */
+  padding: 10px 14px;
+  margin: 10px 0;
+  border-left: 5px solid #78c0b6; /* accent green */
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  color: #1f3837;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+pyscript-output:hover,
+#output > div:hover {
+  background: #e0f6f4;
+  transform: scale(1.02);
+}
+
+/* Accent details: little badges / sticker-style corners */
+pyscript-output::before,
+#output > div::before {
+  content: "★";
+  font-size: 12px;
+  color: #ffa67f; /* muted orange accent */
+  margin-right: 8px;
+}
+
+/* Button styling */
+button {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background: #78c0b6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #5da9a0;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  background: #4d8c84;
+}
+
+/* Small animation: fade in output container on page load */
+#output {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
